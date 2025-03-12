@@ -2,7 +2,11 @@
 
 A [libGDX](https://libgdx.com/) project generated with [gdx-liftoff](https://github.com/libgdx/gdx-liftoff).
 
-This project was generated with a template including simple application launchers and an `ApplicationAdapter` extension that draws libGDX logo.
+
+Performance test of GLTF Sponza model (model and batteries not included).
+
+Get model from here  https://github.com/KhronosGroup/glTF-Sample-Models/tree/main/2.0/Sponza
+and place under assets
 
 ## Platforms
 
@@ -11,14 +15,15 @@ This project was generated with a template including simple application launcher
 
 ## Performance Testing
 
-NVIDIA Nsight Graphics
+NVIDIA Nsight Graphics: download from here: https://developer.nvidia.com/nsight-graphics
 
-Create runnable jar file with gradle: Task :lwjgl3:jar
+Create a runnable jar file with gradle: Task :lwjgl3:jar
 
 In Nvidia Nsight:
 
 Command line with args: "path\to\java" -jar TestSponza-1.0.0.jar
-e.g. "C:\Program Files\BellSoft\LibericaJDK-17\bin\java.exe" -jar TestSponza-1.0.0.jar
+    e.g. "C:\Program Files\BellSoft\LibericaJDK-17\bin\java.exe" -jar TestSponza-1.0.0.jar
+
 working directory: F:\Coding\IdeaProjects\TestSponza\lwjgl3\build\libs
 
 
