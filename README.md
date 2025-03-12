@@ -27,3 +27,6 @@ Command line with args: "path\to\java" -jar TestSponza-1.0.0.jar
 working directory: F:\Coding\IdeaProjects\TestSponza\lwjgl3\build\libs
 
 
+Alternatively you can use RenderDoc.  The process is very similar.
+
+

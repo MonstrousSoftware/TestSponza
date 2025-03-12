@@ -8,9 +8,7 @@ import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g3d.shaders.DepthShader;
 import com.badlogic.gdx.graphics.g3d.utils.CameraInputController;
-import com.badlogic.gdx.math.MathUtils;
 import com.badlogic.gdx.math.Vector3;
-import com.badlogic.gdx.utils.ScreenUtils;
 import net.mgsx.gltf.loaders.gltf.GLTFLoader;
 import net.mgsx.gltf.scene3d.attributes.PBRCubemapAttribute;
 import net.mgsx.gltf.scene3d.attributes.PBRTextureAttribute;
@@ -77,6 +75,9 @@ public class Main extends ApplicationAdapter
         camera.far = 100f;
         camera.position.set(5.7f, 5, -1.6f);
         camera.lookAt(new Vector3(-10,5,0));
+        camera.update();
+
+        System.out.println("camera dir:"+camera.direction);
         sceneManager.setCamera(camera);
 
         if(withShadows) {
@@ -146,7 +147,7 @@ public class Main extends ApplicationAdapter
         sceneManager.render();
 
         batch.begin();
-        //font.draw(batch, "cam pos: " +camera.position.toString(), 10, 100);
+        font.draw(batch, "cam pos: " +camera.position.toString(), 10, 100);
         font.draw(batch, "FPS: " +Gdx.graphics.getFramesPerSecond(), 10, 50);
         batch.end();
     }
